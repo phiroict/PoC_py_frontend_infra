@@ -1,27 +1,26 @@
----
-  apiVersion: apps/v1
-  kind: Deployment
-  metadata:
-    name: k8s-frontend
-    labels:
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-frontend
+  labels:
+    app: k8s-frontend
+spec:
+  replicas: 12
+  selector:
+    matchLabels:
       app: k8s-frontend
-  spec:
-    replicas: 12
-    selector:
-      matchLabels:
+  template:
+    metadata:
+      labels:
         app: k8s-frontend
-    template:
-      metadata:
-        labels:
-          app: k8s-frontend
-      spec:
-        containers:
-        - name: k8s-frontend
-          image: phiroict/k8s-test-frontend:20210925.0
-          ports:
-          - containerPort: 5000
-          env:
-          - name: BACKEND_SERVICE
-            value: backend
-          - name: BACKEND_PORT
-            value: "4000"
+    spec:
+      containers:
+      - name: k8s-frontend
+        image: phiroict/k8s-test-frontend:fd46bc246dca4a1e8e79f31c7062bb8871ff446583e1138e9cf7acbe020958f6
+        ports:
+        - containerPort: 5000
+        env:
+        - name: BACKEND_SERVICE
+          value: backend
+        - name: BACKEND_PORT
+          value: '4000'
