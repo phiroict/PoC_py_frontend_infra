@@ -16,11 +16,11 @@ spec:
     spec:
       containers:
       - name: k8s-frontend
-        image: phiroict/k8s-test-frontend@sha256:8a0b8355195f76dc80626bafac7b2f9a3a1a8b64ae2cd715bb8ae75446fa7556
+        image: phiroict/k8s-test-frontend@sha256:149823915553561024a716ac405b38220385db2552b0afb393dbf7943818c77d
         ports:
         - containerPort: 5000
         env:
         - name: BACKEND_SERVICE
-          value: 'backend'
+          value: backend
         - name: BACKEND_PORT
           value: '4000'
