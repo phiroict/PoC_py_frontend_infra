@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-frontend
+  labels:
+    app: k8s-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-frontend
+  template:
+    spec:
+      containers:
+      - name: k8s-frontend
+        image: phiroict/k8s-test-frontend@sha256:149823915553561024a716ac405b38220385db2552b0afb393dbf7943818c77d
