@@ -5,3 +5,5 @@ bases:
 
 patchesStrategicMerge:
 - 02-deployment-frontend.yaml
+- 06-route-frontend.yaml
+- 06-route-frontend.yaml
