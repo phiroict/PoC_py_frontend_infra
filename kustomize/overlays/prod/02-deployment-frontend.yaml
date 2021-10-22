@@ -13,4 +13,4 @@ spec:
     spec:
       containers:
       - name: k8s-frontend
-        image: phiroict/k8s-test-frontend@sha256:149823915553561024a716ac405b38220385db2552b0afb393dbf7943818c77d
+        image: phiroict/k8s-test-frontend@sha256:8d924ecca56e03b5225b5430f627ad5d8454606988a8f08af9c4d9e71e96604c
